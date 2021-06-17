@@ -1,0 +1,9 @@
+<component name="libraryTable">
+  <library name="LudoFX">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/LudoFX/build/deploy/LudoFX.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES />
+  </library>
+</component>
