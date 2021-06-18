@@ -52,6 +52,7 @@ public class UI extends Main {
 			{332,332,332,332,332,332 ,302,272,241,211,183,151 ,151,151 ,183,211,241,272,302 ,332,332,332,332,332,332 ,362,393 ,393,393,393,393,393 ,427,459,487,516,547,577 ,577,577 ,547,516,487,459,427 ,393,393,393,393,393,393 ,362}};
 	//Starting positions for all 4 players
 	static int [][] Starting_P = new int [][] {{90,170,430,510},{150,242,482,574}};
+
 	//Sound effects
 	AudioClip deathSound;
 	AudioClip applause;
@@ -124,7 +125,7 @@ public class UI extends Main {
 		//initializing Sound effects
 		deathSound = new AudioClip(getClass().getResource("audio/deathSound.wav").toString());
 		applause = new AudioClip(getClass().getResource("audio/applause.wav").toString());
-		diceRoll = new AudioClip(getClass().getResource("audio/Dice_Roll.mp3").toString());
+		diceRoll = new AudioClip(getClass().getResource("audio/Card-flip-sound-effect.mp3").toString());
 	}
 	
 	//Menu
