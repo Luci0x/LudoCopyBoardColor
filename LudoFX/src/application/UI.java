@@ -936,6 +936,7 @@ public class UI extends Main {
 	Card queenOfClubs = new Card("application\\Cards\\queen_of_clubs.png",12);
 	Card kingOfClubs = new Card("application\\Cards\\king_of_clubs.png",13);
 
+
 	// All Spades Cards
 	Card aceOfSpades = new Card("application\\Cards\\ace_of_spades.png",1);
 	Card twoOfSpades = new Card("application\\Cards\\2_of_spades.png",2);
