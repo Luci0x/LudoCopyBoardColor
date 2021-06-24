@@ -7,10 +7,10 @@
 <?import javafx.scene.layout.*?>
 <?import javafx.scene.shape.*?>
 
-<AnchorPane prefHeight="800.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UI">
+<AnchorPane prefHeight="800.0" prefWidth="571.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="application.UI">
    <children>
 
-      <AnchorPane fx:id="Game_Start_Menu" maxHeight="800.0" maxWidth="600.0" minHeight="800.0" minWidth="600.0" prefHeight="800.0" prefWidth="600.0" visible="false">
+      <AnchorPane fx:id="Game_Start_Menu" prefHeight="810.0" prefWidth="553.0">
          <children>
 
             <Label id="startGameLabel" fx:id="startGameLabel" layoutX="150.0" layoutY="96.0" prefHeight="26.0" prefWidth="300.0" text="You need at least 2 players to start !" />
@@ -33,39 +33,39 @@
       </AnchorPane>
 
 
-      <AnchorPane fx:id="Game_APane" maxHeight="800.0" maxWidth="600.0" minHeight="800.0" minWidth="600.0" prefHeight="800.0" prefWidth="600.0" style="-fx-background-color: #ffffff;">
+      <AnchorPane fx:id="Game_APane" prefHeight="750.0" prefWidth="300.0" style="-fx-background-color: #ffffff;" visible="false">
          <children>
 
             <Polygon fx:id="P1_Tri" fill="WHITE" layoutX="277.0" layoutY="373.0" rotate="90.0" scaleX="0.92" scaleY="0.45" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
                <points>
-                  <Double fx:cardValue="-50.0" />
-                  <Double fx:cardValue="40.0" />
-                  <Double fx:cardValue="50.0" />
-                  <Double fx:cardValue="40.0" />
-                  <Double fx:cardValue="0.0" />
-                  <Double fx:cardValue="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
                </points>
             </Polygon>
             <Rectangle fx:id="P3_Rec" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="157.0" layoutX="254.0" layoutY="410.0" stroke="BLACK" strokeType="INSIDE" width="62.0" />
             <Polygon fx:id="P4_Tri" fill="WHITE" layoutX="323.0" layoutY="373.0" rotate="-90.0" scaleX="0.92" scaleY="0.45" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
                <points>
-                  <Double fx:cardValue="-50.0" />
-                  <Double fx:cardValue="40.0" />
-                  <Double fx:cardValue="50.0" />
-                  <Double fx:cardValue="40.0" />
-                  <Double fx:cardValue="0.0" />
-                  <Double fx:cardValue="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
                </points>
             </Polygon>
             <Rectangle fx:id="P4_Rec" arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="157.0" layoutX="393.0" layoutY="299.0" rotate="90.0" stroke="BLACK" strokeType="INSIDE" width="62.0" />
             <Polygon fx:id="P3_Tri" fill="WHITE" layoutX="300.0" layoutY="397.0" scaleX="0.92" scaleY="0.45" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
                <points>
-                  <Double fx:cardValue="-50.0" />
-                  <Double fx:cardValue="40.0" />
-                  <Double fx:cardValue="50.0" />
-                  <Double fx:cardValue="40.0" />
-                  <Double fx:cardValue="0.0" />
-                  <Double fx:cardValue="-60.0" />
+                  <Double fx:value="-50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="50.0" />
+                  <Double fx:value="40.0" />
+                  <Double fx:value="0.0" />
+                  <Double fx:value="-60.0" />
                </points>
             </Polygon>
 
@@ -74,67 +74,65 @@
             <Polygon fx:id="P2_Tri" fill="WHITE" layoutX="300.0" layoutY="350.0" rotate="180.0" scaleX="0.92" scaleY="0.45" stroke="BLACK" strokeType="INSIDE" strokeWidth="0.0">
 
               <points>
-                <Double fx:cardValue="-50.0" />
-                <Double fx:cardValue="40.0" />
-                <Double fx:cardValue="50.0" />
-                <Double fx:cardValue="40.0" />
-                <Double fx:cardValue="0.0" />
-                <Double fx:cardValue="-60.0" />
+                <Double fx:value="-50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="50.0" />
+                <Double fx:value="40.0" />
+                <Double fx:value="0.0" />
+                <Double fx:value="-60.0" />
               </points>
             </Polygon>
 
 
-            <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" y="50.0">
+            <ImageView fitHeight="593.0" fitWidth="680.0">
                <image>
-                  <Image url="@../imgs/Main_img.png" />
+                  <Image url="@../imgs/Board2.png" />
                </image>
             </ImageView>
-
-            <Line endX="600.0" endY="42.0" startY="42.0" />
-            <Line endX="600.0" endY="650.0" layoutY="26.0" startY="650.0" />
 
             <Button fx:id="Dice_Button" layoutX="246.0" layoutY="685.0" mnemonicParsing="false" onAction="#rollDice" onKeyPressed="#rollDice" prefHeight="110.0" prefWidth="112.0" />
 
             <Rectangle fx:id="diceButtonRec" arcHeight="5.0" arcWidth="5.0" blendMode="ADD" disable="true" height="105.0" layoutX="246.0" layoutY="685.0" opacity="0.7" stroke="BLACK" strokeType="INSIDE" width="105.0" />
-            
-            <Circle fx:id="P1_Dog1" fill="RED" layoutX="116.0" layoutY="216.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P1_Dog2" fill="RED" layoutX="139.0" layoutY="190.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P1_Dog4" fill="RED" layoutX="165.0" layoutY="167.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P1_Dog3" fill="RED" layoutX="90.0" layoutY="242.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P2_Dog3" fill="#008000" layoutX="430.0" layoutY="242.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P2_Dog4" fill="#008000" layoutX="510.0" layoutY="242.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P2_Dog2" fill="#008000" layoutX="510.0" layoutY="150.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P2_Dog1" fill="#008000" layoutX="430.0" layoutY="150.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P3_Dog1" fill="YELLOW" layoutX="90.0" layoutY="482.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P3_Dog2" fill="YELLOW" layoutX="170.0" layoutY="482.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P3_Dog4" fill="YELLOW" layoutX="170.0" layoutY="574.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P3_Dog3" fill="YELLOW" layoutX="90.0" layoutY="574.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P4_Dog3" fill="BLUE" layoutX="430.0" layoutY="574.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P4_Dog4" fill="BLUE" layoutX="510.0" layoutY="574.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P4_Dog2" fill="BLUE" layoutX="510.0" layoutY="482.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
-            <Circle fx:id="P4_Dog1" fill="BLUE" layoutX="430.0" layoutY="482.0" radius="13.0" strokeType="INSIDE" styleClass="Dogs" />
 
-            <Label fx:id="P1_Lb" layoutX="1.0" layoutY="42.0" maxHeight="50.0" maxWidth="249.0" minWidth="130.0" prefHeight="50.0" prefWidth="249.0" styleClass="Name_Labels" />
-            <Label fx:id="P3_Lb" layoutY="625.0" maxHeight="50.0" maxWidth="249.0" minWidth="130.0" prefHeight="50.0" prefWidth="249.0" styleClass="Name_Labels" />
-            <Label fx:id="P2_Lb" layoutX="353.0" layoutY="42.0" maxHeight="50.0" maxWidth="249.0" minWidth="130.0" prefHeight="50.0" prefWidth="249.0" styleClass="Name_Labels" />
-            <Label fx:id="P4_Lb" layoutX="351.0" layoutY="625.0" maxHeight="50.0" maxWidth="249.0" minWidth="130.0" prefHeight="50.0" prefWidth="249.0" styleClass="Name_Labels" />
+            <Polygon fx:id="P1_Dog1" fill="RED" layoutX="183.0" layoutY="72.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P1_Dog2" fill="RED" layoutX="147.0" layoutY="104.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P1_Dog4" fill="RED" layoutX="74.0" layoutY="171.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P1_Dog3" fill="RED" layoutX="109.0" layoutY="139.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P2_Dog3" fill="#008000" layoutX="541.0" layoutY="139.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P2_Dog4" fill="#008000" layoutX="579.0" layoutY="171.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P2_Dog2" fill="#008000" layoutX="505.0" layoutY="104.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P2_Dog1" fill="#008000" layoutX="467.0" layoutY="72.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P3_Dog1" fill="YELLOW" layoutX="74.0" layoutY="434.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P3_Dog2" fill="YELLOW" layoutX="109.0" layoutY="473.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P3_Dog4" fill="YELLOW" layoutX="183.0" layoutY="535.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P3_Dog3" fill="YELLOW" layoutX="147.0" layoutY="501.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P4_Dog3" fill="BLUE" layoutX="505.0" layoutY="501.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P4_Dog4" fill="BLUE" layoutX="465.0" layoutY="535.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P4_Dog2" fill="BLUE" layoutX="541.0" layoutY="473.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+            <Polygon fx:id="P4_Dog1" fill="BLUE" layoutX="579.0" layoutY="434.0" points="0.0, 20.0, 21.0, 20.0, 10.0, -8.0" strokeType="INSIDE" styleClass="Dogs" />
+
+            <Label fx:id="P1_Lb" layoutX="183.0" layoutY="72.0" maxHeight="50.0" maxWidth="249.0" minWidth="130.0" prefHeight="50.0" prefWidth="249.0" styleClass="Name_Labels" />
+            <Label fx:id="P3_Lb" layoutX="147.0" layoutY="104.0" maxWidth="249.0" minWidth="130.0" prefHeight="50.0" prefWidth="249.0" styleClass="Name_Labels" />
+            <Label fx:id="P2_Lb" layoutX="109.0" layoutY="139.0" maxHeight="50.0" maxWidth="249.0" minWidth="130.0" prefHeight="50.0" prefWidth="249.0" styleClass="Name_Labels" />
+            <Label fx:id="P4_Lb" layoutX="109.0" layoutY="139.0" maxHeight="50.0" maxWidth="249.0" minWidth="130.0" prefHeight="50.0" prefWidth="249.0" styleClass="Name_Labels" />
 
             <Button id="Return_Button" cancelButton="true" focusTraversable="false" layoutX="18.0" maxHeight="41.0" maxWidth="41.0" minHeight="41.0" minWidth="41.0" mnemonicParsing="false" onAction="#Backto_Menu" prefHeight="41.0" prefWidth="41.0" />
 
-            <Button fx:id="D_Button1" layoutX="77.0" layoutY="137.0" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" mnemonicParsing="false" onAction="#Dog_Button_Clicked" prefHeight="26.0" prefWidth="26.0" styleClass="Dog_Button" text="0" textAlignment="CENTER" visible="false" />
+            <Button fx:id="D_Button1" layoutX="147.0" layoutY="104.0" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" mnemonicParsing="false" onAction="#Dog_Button_Clicked" prefHeight="26.0" prefWidth="26.0" styleClass="Dog_Button" text="0" textAlignment="CENTER" visible="false" />
             <Button fx:id="D_Button2" layoutX="157.0" layoutY="137.0" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" mnemonicParsing="false" onAction="#Dog_Button_Clicked" prefHeight="26.0" prefWidth="26.0" styleClass="Dog_Button" text="1" textAlignment="CENTER" visible="false" />
             <Button fx:id="D_Button3" layoutX="77.0" layoutY="229.0" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" mnemonicParsing="false" onAction="#Dog_Button_Clicked" prefHeight="26.0" prefWidth="26.0" styleClass="Dog_Button" text="2" textAlignment="CENTER" visible="false" />
             <Button fx:id="D_Button4" layoutX="157.0" layoutY="229.0" maxHeight="26.0" maxWidth="26.0" minHeight="26.0" minWidth="26.0" mnemonicParsing="false" onAction="#Dog_Button_Clicked" prefHeight="26.0" prefWidth="26.0" styleClass="Dog_Button" text="3" textAlignment="CENTER" visible="false" />
-            <SplitPane dividerPositions="0.5, 0.5, 0.5, 0.5" layoutX="53.0" layoutY="650.0">
+            <SplitPane dividerPositions="0.5, 0.5, 0.5, 0.5" layoutX="53.0" layoutY="650.0" visible="false">
                <items>
-      
-                  <ImageView fx:id="imageView1" fitHeight="138.0" fitWidth="100.0" onMouseClicked="#imageSelected" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="imageView3" fitHeight="138.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="imageView5" fitHeight="138.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="imageView4" fitHeight="138.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
-                  <ImageView fx:id="imageView2" fitHeight="138.0" fitWidth="100.0" pickOnBounds="true" preserveRatio="true" />
+
+                  <ImageView fx:id="imageView1" fitHeight="138.0" fitWidth="100.0" onMouseClicked="#CardUsed1" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageView2" fitHeight="138.0" fitWidth="100.0" onMouseClicked="#CardUsed2" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageView3" fitHeight="138.0" fitWidth="100.0" onMouseClicked="#CardUsed3" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageView4" fitHeight="138.0" fitWidth="100.0" onMouseClicked="#CardUsed4" pickOnBounds="true" preserveRatio="true" />
+                  <ImageView fx:id="imageView5" fitHeight="138.0" fitWidth="100.0" onMouseClicked="#CardUsed5" pickOnBounds="true" preserveRatio="true" />
                </items>
             </SplitPane>
+
             <Button fx:id="New_Card" layoutX="1.0" layoutY="650.0" mnemonicParsing="false" onAction="#newCard" text="Button" />
 
          </children>

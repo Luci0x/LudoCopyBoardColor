@@ -1,5 +1,6 @@
 package application;
 
+import java.awt.event.MouseEvent;
 import java.util.ArrayList;
 import java.util.Random;
 
@@ -18,7 +19,7 @@ import javafx.scene.layout.AnchorPane;
 import javafx.scene.layout.BorderPane;
 import javafx.scene.media.AudioClip;
 import javafx.scene.paint.Paint;
-import javafx.scene.shape.Circle;
+import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Polygon;
 import javafx.scene.shape.Rectangle;
 import javafx.util.Duration;
@@ -51,8 +52,8 @@ public class UI extends Main {
 	//used on matchFinished to show the winners
 	static String WIN_STRING;
 	//cords of the positions, there are 52 main positions
-	static int [][] D_Pos = new int [][] {{87,119,148,177,208,238 ,269,269,269,269,269,269 ,301,331 ,331,331,331,331,331 ,362,392,422,451,482,513 ,513,513 ,482,451,422,392,362 ,331,331,331,331,331,331 ,301,269 ,269,269,269,269,269 ,238,208,177,148,119,87 ,87},
-			{332,332,332,332,332,332 ,302,272,241,211,183,151 ,151,151 ,183,211,241,272,302 ,332,332,332,332,332,332 ,362,393 ,393,393,393,393,393 ,427,459,487,516,547,577 ,577,577 ,547,516,487,459,427 ,393,393,393,393,393,393 ,362}};
+	static int [][] D_Pos = new int [][] {{74, 110, 145, 181, 218, 253, 252, 252, 253, 253, 253, 289, 326, 360, 396, 397, 397, 398, 396, 396, 434, 469, 504, 541, 576, 576, 577, 576, 578, 541, 504, 468, 432, 396, 397, 396, 396, 396, 395, 361, 326, 289, 255, 253, 253, 254, 254, 253, 216, 181, 145, 110, 74, 74, 74, 74},
+			{239, 239, 239, 239, 239, 239, 205, 172, 140, 105, 73, 73, 73, 72, 72, 105, 139, 171, 205, 239, 239, 239, 238, 239, 238, 272, 305, 337, 370, 370, 370, 370, 370, 371, 404, 438, 469, 503, 536, 536, 536, 536, 536, 503, 469, 438, 404, 371, 370, 372, 372, 372, 372, 338, 307, 274}};
 	//Starting positions for all 4 players
 	static int [][] Starting_P = new int [][] {{90,170,430,510},{150,242,482,574}};
 
@@ -80,10 +81,10 @@ public class UI extends Main {
 	@FXML private Label P1_Lb;
 	@FXML private TextField P1_N;
 	@FXML private ColorPicker P1_Cl;
-	@FXML private Circle P1_Dog1;
-	@FXML private Circle P1_Dog2;
-	@FXML private Circle P1_Dog3;
-	@FXML private Circle P1_Dog4;
+	@FXML private Polygon P1_Dog1;
+	@FXML private Polygon P1_Dog2;
+	@FXML private Polygon P1_Dog3;
+	@FXML private Polygon P1_Dog4;
 	@FXML private Rectangle P1_Rec;
 	@FXML private Polygon P1_Tri;
 	
@@ -92,10 +93,10 @@ public class UI extends Main {
 	@FXML private Label P2_Lb;
 	@FXML private TextField P2_N;
 	@FXML private ColorPicker P2_Cl;
-	@FXML private Circle P2_Dog1;
-	@FXML private Circle P2_Dog2;
-	@FXML private Circle P2_Dog3;
-	@FXML private Circle P2_Dog4;
+	@FXML private Polygon P2_Dog1;
+	@FXML private Polygon P2_Dog2;
+	@FXML private Polygon P2_Dog3;
+	@FXML private Polygon P2_Dog4;
 	@FXML private Rectangle P2_Rec;
 	@FXML private Polygon P2_Tri;
 	
@@ -104,10 +105,10 @@ public class UI extends Main {
 	@FXML private Label P3_Lb;
 	@FXML private TextField P3_N;
 	@FXML private ColorPicker P3_Cl;
-	@FXML private Circle P3_Dog1;
-	@FXML private Circle P3_Dog2;
-	@FXML private Circle P3_Dog3;
-	@FXML private Circle P3_Dog4;
+	@FXML private Polygon P3_Dog1;
+	@FXML private Polygon P3_Dog2;
+	@FXML private Polygon P3_Dog3;
+	@FXML private Polygon P3_Dog4;
 	@FXML private Rectangle P3_Rec;
 	@FXML private Polygon P3_Tri;
 	
@@ -116,10 +117,10 @@ public class UI extends Main {
 	@FXML private Label P4_Lb;
 	@FXML private TextField P4_N;
 	@FXML private ColorPicker P4_Cl;
-	@FXML private Circle P4_Dog1;
-	@FXML private Circle P4_Dog2;
-	@FXML private Circle P4_Dog3;
-	@FXML private Circle P4_Dog4;
+	@FXML private Polygon P4_Dog1;
+	@FXML private Polygon P4_Dog2;
+	@FXML private Polygon P4_Dog3;
+	@FXML private Polygon P4_Dog4;
 	@FXML private Rectangle P4_Rec;
 	@FXML private Polygon P4_Tri;
 	
@@ -182,10 +183,7 @@ public class UI extends Main {
 			if (CURRENT_PLAYER<0) CURRENT_PLAYER=0;
 
 			//Creating new player
-			//with the color, if the color is white we use a random color
 			color = "#FF0000";
-
-			//if the name isn't given we use a generated name
 			name = P1_N.getText();
 
 			//creating the player with a name and a color
@@ -205,14 +203,14 @@ public class UI extends Main {
 				P[0].Dogs_Pos_Ininial_Cord[1][i] = (int) P[0].Dogs[i].getLayoutY() - 13;
 			}
 
-			//Making all dogs dead (lmao)
+			//Making all dogs dead
 			for (int i = 0; i < 4; i++) P[0].Dogs_Alive[i] = false;
 
 			//Making all dogs Not entering
 			for (int i = 0; i < 4; i++) P[0].Dogs_Entering[i] = false;
 
 			//setting Starting Point for each player
-			P[0].Player_Start_Pos = 1;
+			P[0].Player_Start_Pos = 0;
 
 			//player entering vars used in move dog...
 			P[0].P_E_X = 0;
@@ -268,7 +266,7 @@ public class UI extends Main {
 			for(int i=0;i<4;i++) {P[2].Dogs_Pos_Ininial_Cord[0][i]=(int)P[2].Dogs[i].getLayoutX()-13;P[2].Dogs_Pos_Ininial_Cord[1][i]=(int)P[2].Dogs[i].getLayoutY()-13;};
 			for(int i=0;i<4;i++) P[2].Dogs_Alive[i]=false;
 			for(int i=0;i<4;i++) P[2].Dogs_Entering[i]=false;
-			P[2].Player_Start_Pos=40;
+			P[2].Player_Start_Pos=42;
 			P[2].P_E_X=1;
 			P[2].P_E_Y=0;
 			P3_Lb.setText(P[2].Name);
@@ -294,7 +292,7 @@ public class UI extends Main {
 			for(int i=0;i<4;i++) {P[3].Dogs_Pos_Ininial_Cord[0][i]=(int)P[3].Dogs[i].getLayoutX()-13;P[3].Dogs_Pos_Ininial_Cord[1][i]=(int)P[3].Dogs[i].getLayoutY()-13;};
 			for(int i=0;i<4;i++) P[3].Dogs_Alive[i]=false;
 			for(int i=0;i<4;i++) P[3].Dogs_Entering[i]=false;
-			P[3].Player_Start_Pos=27;
+			P[3].Player_Start_Pos=28;
 			P[3].P_E_X=0;
 			P[3].P_E_Y=-1;
 			P4_Lb.setText(P[3].Name);
@@ -497,8 +495,8 @@ public class UI extends Main {
 		return As;
 	}
 	public boolean moveDog(Player P,int Dog,int x) {
-		//the win variable
 		boolean Win=false;
+
 		//new position in Player class
 		P.Dogs_Pos[Dog]=P.Dogs_Pos[Dog]+x;
 		
@@ -724,10 +722,11 @@ public class UI extends Main {
 		if (pos == 1 || pos == 14 || pos == 27 || pos == 40)return true;
 		return false;
 	}
+
 	public void moveDogToStart(int p,int Dog) {
 		//putting dog to its start point
-		P[p].Dogs[Dog].setLayoutX(P[p].Dogs_Pos_Ininial_Cord[0][Dog]+13);
-		P[p].Dogs[Dog].setLayoutY(P[p].Dogs_Pos_Ininial_Cord[1][Dog]+13);
+		P[p].Dogs[Dog].setLayoutX(P[p].Dogs_Pos_Ininial_Cord[0][Dog]+2);
+		P[p].Dogs[Dog].setLayoutY(P[p].Dogs_Pos_Ininial_Cord[1][Dog]+2);
 		//dog dead and not entering
 		P[p].Dogs_Entering[Dog] = false;
 		P[p].Dogs_Alive[Dog] = false;
@@ -740,6 +739,7 @@ public class UI extends Main {
 		for(int i=0;i<4;i++) if(!P.Dogs_Entered[i]) return false;
 		return true;
 	}
+
 	public void winAnimation(int C_P,ImageView Explostion_Sprite,ImageView Star,Label L) {
 		Dice_Button.setDisable(true);
 		
@@ -770,7 +770,7 @@ public class UI extends Main {
 		TT1.setDuration(Duration.seconds(1));
 		TT1.setNode(Star);
 		TT1.setToY(-700);
-		//going from the middle of the screen to the player circle
+		//going from the middle of the screen to the player Polygon
 		TranslateTransition TT2 = new TranslateTransition();
 		TT2.setDuration(Duration.seconds(.5));
 		TT2.setNode(Star);
@@ -1034,13 +1034,34 @@ public class UI extends Main {
 		imageView3.setImage(cardImage3);
 		imageView4.setImage(cardImage4);
 		imageView5.setImage(cardImage5);
+
+		imageView1.setVisible(true);
+		imageView2.setVisible(true);
+		imageView3.setVisible(true);
+		imageView4.setVisible(true);
+		imageView5.setVisible(true);
 	}
 
-	public void imageSelected(Card card){
-		System.out.println("Imageview has been clicked");;
-
-
+		public void CardUsed1(){
+		imageView1.setVisible(false);
 	}
+
+	public void CardUsed2(){
+		imageView2.setVisible(false);
+	}
+
+	public void CardUsed3(){
+		imageView3.setVisible(false);
+	}
+
+	public void CardUsed4(){
+		imageView4.setVisible(false);
+	}
+
+	public void CardUsed5(){
+		imageView5.setVisible(false);
+	}
+
 
 
 }

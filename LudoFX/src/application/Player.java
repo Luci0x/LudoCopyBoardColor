@@ -1,6 +1,7 @@
 package application;
 
 import javafx.scene.shape.Circle;
+import javafx.scene.shape.Polygon;
 
 public class Player {
 	boolean won;
@@ -12,7 +13,7 @@ public class Player {
 	int[][] Dogs_Pos_Ininial_Cord=new int[2][4];
 	boolean[] Dogs_Alive=new boolean[4];
 	boolean[] Dogs_Entered=new boolean[4];
-	Circle[] Dogs = new Circle[4];
+	Polygon[] Dogs = new Polygon[4];
 	
 	
 	double CurrentProg;
