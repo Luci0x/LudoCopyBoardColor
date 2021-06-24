@@ -3,6 +3,8 @@ package application;
 import java.util.ArrayList;
 import java.util.Random;
 
+import com.sun.scenario.effect.Glow;
+import javafx.css.PseudoClass;
 import javafx.scene.Node;
 import javafx.scene.control.Alert;
 import javafx.scene.control.Button;
@@ -13,6 +15,7 @@ import javafx.scene.control.TextField;
 import javafx.scene.image.Image;
 import javafx.scene.image.ImageView;
 import javafx.scene.layout.AnchorPane;
+import javafx.scene.layout.BorderPane;
 import javafx.scene.media.AudioClip;
 import javafx.scene.paint.Paint;
 import javafx.scene.shape.Circle;
@@ -899,6 +902,8 @@ public class UI extends Main {
 	public ImageView imageView4;
 	public ImageView imageView5;
 
+
+
 	/**
 	 * ----------------  EXPLANATION BELOW ---------------------------------------
 	 * <p>
@@ -998,10 +1003,43 @@ public class UI extends Main {
 		Random rand = new Random(); // Generates a new random number using the Random class
 
 		int randomNumber1 = rand.nextInt(51) + 1;
+		int randomNumber2 = rand.nextInt(51) + 1;
+		int randomNumber3 = rand.nextInt(51) + 1;
+		int randomNumber4 = rand.nextInt(51) + 1;
+		int randomNumber5 = rand.nextInt(51) + 1;
+
+		if (randomNumber1 == randomNumber2 || randomNumber1 == randomNumber3 || randomNumber1 == randomNumber4 || randomNumber1 == randomNumber5) {
+			randomNumber1 = rand.nextInt(51) + 1;
+		}
+
+		if (randomNumber2 == randomNumber3 || randomNumber2 == randomNumber4 || randomNumber2 == randomNumber5) {
+			randomNumber2 = rand.nextInt(51) + 1;
+		}
+
+		if (randomNumber3 == randomNumber4 || randomNumber3 == randomNumber5){
+			randomNumber3 = rand.nextInt(51) + 1;
+		}
+		if (randomNumber4 == randomNumber5){
+			randomNumber4 = rand.nextInt(51) + 1;
+		}
 
 		Image cardImage1 = new Image(deck[randomNumber1].imageDir);
+		Image cardImage2 = new Image(deck[randomNumber2].imageDir);
+		Image cardImage3 = new Image(deck[randomNumber3].imageDir);
+		Image cardImage4 = new Image(deck[randomNumber4].imageDir);
+		Image cardImage5 = new Image(deck[randomNumber5].imageDir);
 
 		imageView1.setImage(cardImage1);
+		imageView2.setImage(cardImage2);
+		imageView3.setImage(cardImage3);
+		imageView4.setImage(cardImage4);
+		imageView5.setImage(cardImage5);
+	}
+
+	public void imageSelected(Card card){
+		System.out.println("Imageview has been clicked");;
+
+
 	}
 
 

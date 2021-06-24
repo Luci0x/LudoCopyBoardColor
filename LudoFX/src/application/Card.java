@@ -11,10 +11,10 @@ public class Card {
      */
 
     String imageDir; //this.imageDir
-    int value;
+    int cardValue;
 
-    public Card(String imageDir, int value) {
+    public Card(String imageDir, int cardValue) {
         this.imageDir = imageDir;
-        this.value = value;
+        this.cardValue = cardValue;
     }
 }
