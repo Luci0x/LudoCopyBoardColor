@@ -396,10 +396,11 @@ public class UI extends Main {
 		WIN = false;
 		//Getting the random
 		X = getRandom();
+
 		//changing the dice button to that random
 		changeDice(Dice_Button,X);
 		//getting how many dogs are alive
-		int D_As=getHowManyDogsAlive(P[CURRENT_PLAYER]);
+		int D_As = getHowManyDogsAlive(P[CURRENT_PLAYER]);
 		
 		if(X==6){
 			//dice is six
@@ -424,6 +425,7 @@ public class UI extends Main {
 			//to not changeCP
 			return;
 		}
+
 		else if(D_As==1) {
 			//dice not six and only 1 dog alive
 			int y = getFirstAlive();
@@ -442,6 +444,7 @@ public class UI extends Main {
 				return;
 			}
 		}
+
 		//if the player won
 		if(WIN) {
 			//the wining animation , making player won , incrementing the win count
@@ -508,6 +511,7 @@ public class UI extends Main {
 			
 			if(P.Player_Start_Pos==1) {if(P.Dogs_Pos[Dog]>T) P.Dogs_Entering[Dog]=true;}
 			else if(P.Dogs_Pos[Dog]>T && P.Dogs_Pos[Dog]<P.Player_Start_Pos) P.Dogs_Entering[Dog]=true;
+
 			//setting dog to new position
 			P.Dogs[Dog].setLayoutX(D_Pos[0][P.Dogs_Pos[Dog]]);
 			P.Dogs[Dog].setLayoutY(D_Pos[1][P.Dogs_Pos[Dog]]);
@@ -517,6 +521,7 @@ public class UI extends Main {
 		else {
 			if(P.Dogs_Pos[Dog]>P.Player_Start_Pos) {
 				if(P.Dogs_Pos[Dog]>P.Player_Start_Pos && P.Dogs_Pos[Dog]<P.Player_Start_Pos+6) {
+
 					//after starting pos
 					//General: (wut a pain to find)
 					P.Dogs[Dog].setLayoutX(D_Pos[0][P.Dogs_Pos[Dog]-1]+30*P.P_E_X);
@@ -887,5 +892,116 @@ public class UI extends Main {
 			}
 		});
 	}
+
+	public ImageView imageView1;
+	public ImageView imageView2;
+	public ImageView imageView3;
+	public ImageView imageView4;
+	public ImageView imageView5;
+
+	/**
+	 * ----------------  EXPLANATION BELOW ---------------------------------------
+	 * <p>
+	 * Each Card is assigned the location of the image 'imageDir'.
+	 * This is located in the application folder, which has another folder called Cards.
+	 * <p>
+	 */
+
+	Card aceOfHearts = new Card("application\\Cards\\ace_of_hearts.png",1);
+	Card twoOfHearts = new Card("application\\Cards\\2_of_hearts.png",2);
+	Card threeOfHearts = new Card("application\\Cards\\3_of_hearts.png",3);
+	Card fourOfHearts = new Card("application\\Cards\\4_of_hearts.png",-4);
+	Card fiveOfHearts = new Card("application\\Cards\\5_of_hearts.png",5);
+	Card sixOfHearts = new Card("application\\Cards\\6_of_hearts.png",6);
+	Card sevenOfHearts = new Card("application\\Cards\\7_of_hearts.png",7);
+	Card eightOfHearts = new Card("application\\Cards\\8_of_hearts.png",8);
+	Card nineOfHearts = new Card("application\\Cards\\9_of_hearts.png",9);
+	Card tenOfHearts = new Card("application\\Cards\\10_of_hearts.png",10);
+	Card jackOfHearts = new Card("application\\Cards\\jack_of_hearts.png",11);
+	Card queenOfHearts = new Card("application\\Cards\\queen_of_hearts.png",12);
+	Card kingOfHearts = new Card("application\\Cards\\king_of_hearts.png",13);
+
+	// All Clubs Cards
+	Card aceOfClubs = new Card("application\\Cards\\ace_of_clubs.png",1);
+	Card twoOfClubs = new Card("application\\Cards\\2_of_clubs.png",2);
+	Card threeOfClubs = new Card("application\\Cards\\3_of_clubs.png",3);
+	Card fourOfClubs = new Card("application\\Cards\\4_of_clubs.png",-4);
+	Card fiveOfClubs = new Card("application\\Cards\\5_of_clubs.png",5);
+	Card sixOfClubs = new Card("application\\Cards\\6_of_clubs.png",6);
+	Card sevenOfClubs = new Card("application\\Cards\\7_of_clubs.png",7);
+	Card eightOfClubs = new Card("application\\Cards\\8_of_clubs.png",8);
+	Card nineOfClubs = new Card("application\\Cards\\9_of_clubs.png",9);
+	Card tenOfClubs = new Card("application\\Cards\\10_of_clubs.png",10);
+	Card jackOfClubs = new Card("application\\Cards\\jack_of_clubs.png",11);
+	Card queenOfClubs = new Card("application\\Cards\\queen_of_clubs.png",12);
+	Card kingOfClubs = new Card("application\\Cards\\king_of_clubs.png",13);
+
+	// All Spades Cards
+	Card aceOfSpades = new Card("application\\Cards\\ace_of_spades.png",1);
+	Card twoOfSpades = new Card("application\\Cards\\2_of_spades.png",2);
+	Card threeOfSpades = new Card("application\\Cards\\3_of_spades.png",3);
+	Card fourOfSpades = new Card("application\\Cards\\4_of_spades.png",-4);
+	Card fiveOfSpades = new Card("application\\Cards\\5_of_spades.png",5);
+	Card sixOfSpades = new Card("application\\Cards\\6_of_spades.png",6);
+	Card sevenOfSpades = new Card("application\\Cards\\7_of_spades.png",7);
+	Card eightOfSpades = new Card("application\\Cards\\8_of_spades.png",8);
+	Card nineOfSpades = new Card("application\\Cards\\9_of_spades.png",9);
+	Card tenOfSpades = new Card("application\\Cards\\10_of_spades.png",10);
+	Card jackOfSpades = new Card("application\\Cards\\jack_of_spades.png",11);
+	Card queenOfSpades = new Card("application\\Cards\\queen_of_spades.png",12);
+	Card kingOfSpades = new Card("application\\Cards\\king_of_spades.png",13);
+
+	// All Diamonds Cards
+	Card aceOfDiamonds = new Card("application\\Cards\\ace_of_diamonds.png",1);
+	Card twoOfDiamonds = new Card("application\\Cards\\2_of_diamonds.png",2);
+	Card threeOfDiamonds = new Card("application\\Cards\\3_of_diamonds.png",3);
+	Card fourOfDiamonds = new Card("application\\Cards\\4_of_diamonds.png",-4);
+	Card fiveOfDiamonds = new Card("application\\Cards\\5_of_diamonds.png",5);
+	Card sixOfDiamonds = new Card("application\\Cards\\6_of_diamonds.png",6);
+	Card sevenOfDiamonds = new Card("application\\Cards\\7_of_diamonds.png",7);
+	Card eightOfDiamonds = new Card("application\\Cards\\8_of_diamonds.png",8);
+	Card nineOfDiamonds = new Card("application\\Cards\\9_of_diamonds.png",9);
+	Card tenOfDiamonds = new Card("application\\Cards\\10_of_diamonds.png",10);
+	Card jackOfDiamonds = new Card("application\\Cards\\jack_of_diamonds.png",11);
+	Card queenOfDiamonds = new Card("application\\Cards\\queen_of_diamonds.png",12);
+	Card kingOfDiamonds = new Card("application\\Cards\\king_of_diamonds.png",13);
+
+	/**
+	 * This is an array called 'deck'.
+	 * This array contains all 52 cards that were created above.
+	 * Each line is separated into the different suits.
+	 * 1) Hearts
+	 * 2) Clubs
+	 * 3) Spades
+	 * 4) Diamonds
+	 */
+
+	Card [] deck =
+			{
+					aceOfHearts, twoOfHearts, threeOfHearts, fourOfHearts, fiveOfHearts, sixOfHearts, sevenOfHearts, eightOfHearts, nineOfHearts, tenOfHearts, jackOfHearts, kingOfHearts, queenOfHearts,
+					aceOfClubs, twoOfClubs, threeOfClubs, fourOfClubs, fiveOfClubs, sixOfClubs, sevenOfClubs, eightOfClubs, nineOfClubs, tenOfClubs, jackOfClubs, kingOfClubs, queenOfClubs,
+					aceOfSpades, twoOfSpades, threeOfSpades, fourOfSpades, fiveOfSpades, sixOfSpades, sevenOfSpades, eightOfSpades, nineOfSpades, tenOfSpades, jackOfSpades, kingOfSpades, queenOfSpades,
+					aceOfDiamonds, twoOfDiamonds, threeOfDiamonds, fourOfDiamonds, fiveOfDiamonds, sixOfDiamonds, sevenOfDiamonds, eightOfDiamonds, nineOfDiamonds, tenOfDiamonds, jackOfDiamonds, kingOfDiamonds, queenOfDiamonds
+			};
+
+
+	/**
+	 *
+	 * This method is used to generate a new card upon each click.
+	 * It generated a random number between 0 and 52 and makes it
+	 * so that you can't have duplicates
+	 *
+	 */
+	public void newCard() {
+
+		Random rand = new Random(); // Generates a new random number using the Random class
+
+		int randomNumber1 = rand.nextInt(51) + 1;
+
+		Image cardImage1 = new Image(deck[randomNumber1].imageDir);
+
+		imageView1.setImage(cardImage1);
+	}
+
 
 }
